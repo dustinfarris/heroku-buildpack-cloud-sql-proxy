@@ -18,7 +18,7 @@ The proxy establishes the actual connection to the Cloud SQL instance and acts a
 
 * **Add envs to server:**  
 `GCLOUD_CREDENTIALS=<base64 string from step before>`  
-`GCLOUD_INSTANCE=<instance-connection-name>=tcp:5432` *instance-connection-name* is found in the overview on the Cloud SQL instance  
+`GCLOUD_INSTANCE=<instance-connection-name>` *instance-connection-name* is found in the overview on the Cloud SQL instance. The proxy listens on the database's default port (5432 for Postgres); to use a different one, set the value to `<instance-connection-name>?port=6000`  
 `YOUR_DB_CONNECTION_URI=postgres://<username>:<password>@localhost:5432/<database-name>` *username* and *password* for the user created in the steps before
 
 * **Add buildpack to server and run `bin/run_cloud_sql_proxy` on startup:**  
