@@ -2,7 +2,7 @@
 
 set -e
 
-VERSION="2.25.3"
+VERSION="2.26.0"
 
 BUILD_DIR=$1
 CACHE_DIR=$2
